@@ -1,6 +1,7 @@
 const express = require('express')
 var https = require("https")
 var fs=require('fs')
+const { log } = require('console')
 const app = express()
 const port = 5000
 app.get('/api/aaa', (req, res) => {
@@ -10,6 +11,7 @@ app.get('/api/aaa', (req, res) => {
 })
 function httpget(cb){
     var data = ""
+    
     https.get(`https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=330917779330`,(res)=>{
         res.on("data",(chunk)=>{
             data+= chunk
