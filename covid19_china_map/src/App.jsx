@@ -217,7 +217,6 @@ export default function App() {
   }
   const change=()=>{
     setflag(!flag)
-    console.log(flag);
   }
   return (
     <div>
